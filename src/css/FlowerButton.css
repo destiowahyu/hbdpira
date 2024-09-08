@@ -1,0 +1,50 @@
+.virtual-flower-invite {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    max-width: 100vh;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  
+  .title {
+    font-size: 1.8rem; /* Ukuran font */
+    color: #d62839; /* Warna pink gelap */
+    margin-bottom: 20px;
+    animation: jump 1.5s ease-in-out infinite; /* Menambahkan animasi */
+  }
+  
+  /* Keyframes untuk animasi lompat-lompat */
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0); /* Posisi awal dan akhir */
+    }
+    50% {
+      transform: translateY(-20px); /* Melompat ke atas */
+    }
+  }
+  
+  .button {
+    padding: 20px 40px; /* Ukuran tombol lebih besar */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6f91;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ed547a;
+    transform: scale(1.45);
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  

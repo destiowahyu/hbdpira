@@ -1,0 +1,155 @@
+/* src/components/Seru.css */
+.quiz-container {
+    min-height: 75vh;
+    background-color: #fdeef5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    max-width: 120vh; /* Atur lebar maksimum sesuai kebutuhan */
+    margin: 0 auto;   /* Pusatkan kontainer */
+    border-radius: 20px;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .question-box, .gift-box {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffd2e3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-box {
+    margin-bottom: 2rem;
+  }
+  
+  .question-text {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .answer-option {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f3f4f6;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .selected-answer:hover {
+    background-color: #f78fc3;
+  }
+  
+  .gift-option {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f6f3f4;
+    margin-bottom: 0.75rem;
+    transition: transform 0.4s ease, background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .gift-option:hover {
+    background-color: #d1d5db;
+  }
+  
+  .gift-option:hover:not(.selected-gift) {
+    transform: translateY(-10px);
+  }
+  
+  .selected-gift {
+    background-color: #f3f4f6;
+  }
+  
+  /* Popup Lebih Meriah */
+  .popup {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .popup-content-final {
+    background-color: #fce4ec;
+    border: 2px solid #ec407a;
+    position: relative;
+    overflow: hidden; /* Untuk confetti */
+    animation: popupAnimation 0.6s ease-out;
+  }
+
+    .question-image {
+        border-radius: 8px; /* Atur sesuai dengan kebutuhan */
+        max-width: 100%; /* Agar gambar tidak melampaui kontainer */
+        height: auto; /* Pertahankan rasio aspek gambar */
+    }
+  
+  
+  @keyframes popupAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animasi confetti */
+  .popup-confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ec407a;
+    animation: fall 2s infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -10%;
+      left: 50%;
+      opacity: 0;
+    }
+    100% {
+      top: 110%;
+      left: calc(50% + 30px);
+      opacity: 1;
+    }
+  }
+  
+  .popup-button {
+    background-color: #ec407a;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-button:hover {
+    background-color: #d81b60;
+  }
+  

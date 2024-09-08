@@ -1,0 +1,198 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Example styles for the popup */
+.bg-pink-200 {
+  background-color: #FCE4EC;
+}
+
+.bg-pink-500 {
+  background-color: #EC407A;
+}
+
+.text-pink-600 {
+  color: #D81B60;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* Animasi untuk membesarkan popup dari tombol */
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-grow {
+  animation: grow 0.6s ease forwards;
+}
+
+/* Wrapper for popup */
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity for fade effect */
+  z-index: 1000;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.popup-wrapper.fade-out {
+  opacity: 0;
+  transform: scale(1.1);  /* Slight zoom out during fade */
+}
+
+/* Main content transitions */
+.main-content-wrapper {
+  opacity: 0;
+  transform: scale(0.95);  /* Start slightly smaller */
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.main-content-wrapper.fade-in {
+  opacity: 1;
+  transform: scale(1);  /* Grow to normal size smoothly */
+}
+
+/* Additional styles */
+.fade-out {
+  opacity: 0;
+  transform: scale(1.1);  /* Zoom out */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);  /* Grow in smoothly */
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+/* Popup wrapper */
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95); /* Light background */
+  z-index: 1000;
+  transition: all 1.2s ease; /* Smooth transition timing */
+  transform-origin: center; /* Transform from center */
+}
+
+/* Morph-out effect */
+.popup-wrapper.morph-out {
+  transform: scale(15); /* Scale up to full-screen */
+  opacity: 0; /* Fade out while scaling */
+  transition: transform 1.2s ease, opacity 0.8s ease;
+}
+
+/* Main content transitions */
+.main-content-wrapper {
+  opacity: 0;
+  transform: scale(0.8); /* Start slightly smaller */
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  transform-origin: center; /* Ensure it morphs from center */
+}
+
+/* Morph-in effect */
+.main-content-wrapper.morph-in {
+  opacity: 1;
+  transform: scale(1); /* Smoothly grow to full-screen */
+}
+
+.flower-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes bloom {
+  0% {
+    transform: scaleY(0.1);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.bloom-petal {
+  animation: bloom 2.5s ease-in-out forwards;
+}
+
+@keyframes bloomCenter {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bloom-center {
+  animation: bloomCenter 2s ease-in-out 1.5s forwards; /* Tengah bunga mekar setelah kelopak */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
