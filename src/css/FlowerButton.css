@@ -1,35 +1,36 @@
 .virtual-flower-invite {
-    min-height: 75vh;
+    min-height: 60vh; /* Mengurangi min-height agar lebih pendek */
+    max-height: 80vh; /* Menambahkan batas ketinggian maksimum */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
+    justify-content: flex-start; /* Menempel lebih ke atas */
+    padding: 15px 15px; /* Mengurangi padding */
     max-width: 100vh;
-    margin: 0 auto;
+    margin: 15px auto; /* Mengurangi margin agar lebih kompak */
     border-radius: 20px;
-  }
-  
-  .title {
-    font-size: 1.8rem; /* Ukuran font */
+}
+
+.title {
+    font-size: 1.8rem; /* Ukuran font tetap */
     color: #d62839; /* Warna pink gelap */
-    margin-bottom: 20px;
-    animation: jump 1.5s ease-in-out infinite; /* Menambahkan animasi */
-  }
-  
-  /* Keyframes untuk animasi lompat-lompat */
-  @keyframes jump {
+    margin-bottom: 15px; /* Mengurangi margin bawah agar lebih ringkas */
+    animation: jump 1.5s ease-in-out infinite;
+}
+
+/* Animasi tetap sama */
+@keyframes jump {
     0%, 100% {
-      transform: translateY(0); /* Posisi awal dan akhir */
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-20px); /* Melompat ke atas */
+        transform: translateY(-20px);
     }
-  }
-  
-  .button {
-    padding: 20px 40px; /* Ukuran tombol lebih besar */
-    font-size: 1.5rem;
+}
+
+.button {
+    padding: 15px 35px; /* Mengurangi ukuran padding tombol */
+    font-size: 1.4rem; /* Mengurangi sedikit ukuran font */
     font-weight: bold;
     color: #fff;
     background-color: #ff6f91;
@@ -37,14 +38,29 @@
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #ed547a;
-    transform: scale(1.45);
-  }
-  
-  .button:focus {
+    transform: scale(1.4); /* Mengurangi scale agar tidak terlalu besar */
+}
+
+.button:focus {
     outline: none;
-  }
-  
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .virtual-flower-invite {
+        padding: 10px 10px; /* Padding lebih kecil di mode mobile */
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 1.4rem; /* Ukuran font lebih kecil di layar kecil */
+    }
+
+    .button {
+        padding: 12px 25px; /* Ukuran padding lebih kecil di mode mobile */
+    }
+}

@@ -6,6 +6,7 @@ import Quiz from './components/Quiz';
 import Sound from './components/Sound';
 import FlowerButton from './components/FlowerButton';
 import Gallery from './components/Gallery';
+import KataDua from './components/KataDua';
 
 function App() {
   const [showPopup, setShowPopup] = useState(true);
@@ -35,6 +36,7 @@ function App() {
         <Album />
         <Quiz />
         <Gallery />
+        <KataDua />
         <FlowerButton />
       </div>
     </div>

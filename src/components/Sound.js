@@ -5,7 +5,7 @@ const Sound = ({ onConfirm }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   const handlePlaySound = () => {
-    const audio = new Audio('/audio/sound1.mp3');
+    const audio = new Audio('/audio/sound3.mp3');
     audio.play();
     triggerFadeOut();
   };
