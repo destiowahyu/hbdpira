@@ -1,9 +1,9 @@
 import React from 'react';
 
 const photos = [
-  { src: '/img/gallery/1.jpg', caption: 'Happy' },
-  { src: '/img/gallery/2.jpg', caption: 'Birthday' },
-  { src: '/img/gallery/3.jpg', caption: 'Sayang' },
+  { src: '/img/gallery/11.jpg', caption: 'Happy' },
+  { src: '/img/gallery/22.jpg', caption: 'Birthday' },
+  { src: '/img/gallery/33.jpg', caption: 'Sayang' },
 ];
 
 const Gallery = () => {
