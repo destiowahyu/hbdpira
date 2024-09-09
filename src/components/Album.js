@@ -57,7 +57,7 @@ const Album = () => {
         {/* Video setelah a31.jpg */}
         <div key="video-ultahfira" className="page"> {/* Tambahkan key unik */}
           <div className="flex flex-col justify-center items-center h-full p-4">
-            <video controls width="300" className="video mb-4 shadow-lg rounded-lg">
+            <video controls width="200" className="video mb-4 shadow-lg rounded-lg">
               <source src="/video/ultahfira2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
