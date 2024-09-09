@@ -4,8 +4,7 @@ import PageFlip from 'react-pageflip';
 import '../css/Album.css'; // Pastikan CSS diimport dengan benar
 
 const Album = () => {
-  const photos = ['a1.jpg', 'a2.jpg', 'a3.jpg', 'a4.jpg', 'a5.jpg', 'a6.jpg', 'a7.jpg', 'a8.jpg', 'a9.jpg', 'a10.jpg', 'a11.jpg'];
-
+  const photos = ['a1.jpg', 'a21.jpg', 'a31.jpg', 'a4.jpg', 'a5.jpg', 'a6.jpg', 'a7.jpg', 'a8.jpg', 'a9.jpg', 'a10.jpg', 'a11.jpg'];
 
   return (
     <div id="album-section" className="page-flip-container flex justify-center items-center ">
@@ -18,8 +17,6 @@ const Album = () => {
         mobileScrollSupport={false} // Disable mobile scroll
         style={{ touchAction: 'none', overflow: 'hidden', borderRadius: '15px', margin: '30px' }}
       >
-        
-        
         
         {/* Sampul Buku */}
         <div className="page" data-density="hard">
@@ -41,22 +38,51 @@ const Album = () => {
           </div>
         </div>
 
+        {/* Foto-foto hingga a31.jpg */}
+        {photos.slice(0, 3).map((photo, index) => (
+          <div key={`photo-${index}`} className="page"> {/* Tambahkan key unik */}
+            <div className="flex flex-col justify-center items-center h-full p-4">
+              <img
+                src={`/img/${photo}`}
+                alt={`photo-${index}`}
+                className="photo mb-4 shadow-lg rounded-lg"
+              />
+              <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
+                Page {index + 1}
+              </p>
+            </div>
+          </div>
+        ))}
 
-          {/* Foto-foto */}
-            {photos.map((photo, index) => (
-              <div key={index} className="page">
-                <div className="flex flex-col justify-center items-center h-full p-4">
-                  <img
-                    src={`/img/${photo}`}
-                    alt={`photo-${index}`}
-                    className="photo mb-4 shadow-lg rounded-lg"
-                  />
-                  <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
-                    Page {index + 1}
-                  </p>
-                </div>
-              </div>
-            ))}
+        {/* Video setelah a31.jpg */}
+        <div key="video-ultahfira" className="page"> {/* Tambahkan key unik */}
+          <div className="flex flex-col justify-center items-center h-full p-4">
+            <video controls width="300" className="video mb-4 shadow-lg rounded-lg">
+              <source src="/video/ultahfira2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
+              Video Page
+            </p>
+          </div>
+        </div>
+
+
+        {/* Foto-foto setelah video */}
+        {photos.slice(3).map((photo, index) => (
+          <div key={index + 3} className="page">
+            <div className="flex flex-col justify-center items-center h-full p-4">
+              <img
+                src={`/img/${photo}`}
+                alt={`photo-${index + 3}`}
+                className="photo mb-4 shadow-lg rounded-lg"
+              />
+              <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
+                Page {index + 4}
+              </p>
+            </div>
+          </div>
+        ))}
 
         {/* Halaman Penutup */}
         <div className="page" data-density="hard">
