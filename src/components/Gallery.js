@@ -9,7 +9,7 @@ const photos = [
 const Gallery = () => {
   return (
     <div className="py-20 bg-white">
-      <h2 className="text-center text-3xl font-bold text-pink-600">Gallery of Memories</h2>
+      <h2 className="text-center text-3xl font-bold text-pink-600">Gallery of Moments</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10 px-4">
         {photos.map((photo, index) => (
           <div key={index} className="relative group">
