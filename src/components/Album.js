@@ -48,7 +48,7 @@ const Album = () => {
                 className="photo mb-4 shadow-lg rounded-lg"
               />
               <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
-                Page {index + 1}
+                Page {index + 1} of 12
               </p>
             </div>
           </div>
@@ -59,10 +59,10 @@ const Album = () => {
           <div className="flex flex-col justify-center items-center h-full p-4">
             <video controls width="200" className="video mb-4 shadow-lg rounded-lg">
               <source src="/video/ultahfira2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              Yah browsermu ngga support, ngga bisa muter video
             </video>
             <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
-              Video Page
+              Page 4 of 12
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Album = () => {
                 className="photo mb-4 shadow-lg rounded-lg"
               />
               <p className="page-number bg-pink-200 bg-opacity-80 text-pink-900 py-1 px-4 rounded-full shadow-lg text-sm font-medium mt-4">
-                Page {index + 4}
+                Page {index + 5} of 12
               </p>
             </div>
           </div>
